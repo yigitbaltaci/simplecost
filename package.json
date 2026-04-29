@@ -1,0 +1,28 @@
+{
+  "name": "claude-cost-root",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "Yiğit Baltacı <yigitbaltaci7@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "build": "pnpm --filter @claude-cost/core build && pnpm --filter simplecost build",
+    "dev": "pnpm -r dev",
+    "test": "pnpm -r test",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "clean": "pnpm -r clean",
+    "cc": "node packages/cli/dist/index.js"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "typescript": "^5.7.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome", "better-sqlite3", "esbuild"]
+  }
+}
