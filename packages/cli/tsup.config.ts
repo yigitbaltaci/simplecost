@@ -7,6 +7,7 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   noExternal: ['@claude-cost/core'],
+  external: ['better-sqlite3'],
   banner: {
     js: '#!/usr/bin/env node',
   },
